@@ -1,0 +1,20 @@
+mixin navmenu(menu_items)
+    h4 Accesorios
+    nav(role="navigation")
+        ul
+            each item in menu_items
+                if item.title == current
+                    li( class=[ '', '', 'active' ])
+                        a( href = item.link )
+                            =item.title
+                else
+                    li( class=[ item.title+'Btn', '' ])
+                        a( href=item.link )
+                            =item.title
+
++navmenu([
+    { 'title': 'Chasis y Tablas',  'link': './index.html'},
+    { 'title': 'Piezas de Repuesto',  'link': './posts.html'},
+    { 'title': 'Ropa',  'link': './posts.html'},
+    { 'title': 'Material Mushing',  'link': './posts.html'}
+])

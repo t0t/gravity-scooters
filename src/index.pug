@@ -1,0 +1,28 @@
+extends ./tpl/_layout
+
+prepend header
+	- current = "Home"
+
+block main
+	include ./_db/_scooters
+	include ./_db/_cover
+
+	section.Cover(style="background-image: url(" + cover.image_url + ")")
+		.CoverIntro
+			h4= cover.description
+			button= cover.cta_text
+		each cat in scooters
+			div.CoverItem(style="background-image: url(" + cat.image_url + ")")
+				h1= cat.name
+				h3= cat.description
+
+	aside
+		h2 Nosotros
+		h2 Dónde provar
+		h2 Nuestra Gente
+
+	footer
+		h2 Accesorios
+		p E-points
+
+	//- include ./tpl/components/_product
