@@ -1,0 +1,23 @@
+//- a(href="index.html" class="siteBrand__logo")
+//-     svg(class="icon  iconLogo")
+//-         use(xlink:href="assets/icons.svg#icon-logo")
+
+mixin navmenu(menu_items)
+    nav.AboutUs(role="navigation")
+        ul
+            each item in menu_items
+                if item.title == current
+                    li( class=[ '', '', 'active' ])
+                        a( href = item.link )
+                            =item.title
+                else
+                    li( class=[ item.title+'Btn', '' ])
+                        a( href=item.link )
+                            =item.title
+
++navmenu([
+    { 'title': 'Sobre Nosotros',  'link': './index.html'},
+    { 'title': 'Nuestros Patinetes',  'link': './posts.html'},
+    { 'title': 'Nuestra Gente',  'link': './posts.html'},
+    { 'title': 'Donde Probar',  'link': './posts.html'}
+])
