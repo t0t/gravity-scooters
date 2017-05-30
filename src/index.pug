@@ -12,7 +12,7 @@ block main
 			h4= cover.description
 			button= cover.cta_text
 		each cat in scooters
-			div.CoverItem(style="background-image: url(" + cat.image_url + ")")
+			a.CoverItem(href=cat.link_url style="background-image: url(" + cat.image_url + ")")
 				h1= cat.name
 				h3= cat.description
 
@@ -20,7 +20,6 @@ block main
 		include tpl/components/_aboutus
 
 	footer
-		h2 Accesorios
-		p E-points
+		button E-points
 
 	//- include ./tpl/components/_product

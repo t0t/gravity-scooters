@@ -1,6 +1,6 @@
 mixin navmenu(menu_items)
-    h4 Gravity
     nav(role="navigation")
+        h4 Gravity
         ul
             each item in menu_items
                 if item.title == current
@@ -13,9 +13,9 @@ mixin navmenu(menu_items)
                             =item.title
 
 +navmenu([
-    { 'title': 'Atención al cliente',  'link': './index.html'},
-    { 'title': 'Registra tu scooter',  'link': './posts.html'},
-    { 'title': 'Devoluciones',  'link': './posts.html'},
-    { 'title': 'Distribuidores',  'link': './posts.html'},
-    { 'title': 'Contacto',  'link': './products.html'}
+    { 'title': 'Atención al cliente',  'link': './atencion-cliente.html'},
+    { 'title': 'Registra tu scooter',  'link': './registra-scooter.html'},
+    { 'title': 'Devoluciones',  'link': './devoluciones.html'},
+    { 'title': 'Distribuidores',  'link': './distribuidores.html'},
+    { 'title': 'Contacto',  'link': './contacto.html'}
 ])

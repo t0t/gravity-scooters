@@ -1,6 +1,6 @@
 mixin navmenu(menu_items)
-    h4 Accesorios
     nav(role="navigation")
+        h4 Accesorios
         ul
             each item in menu_items
                 if item.title == current
@@ -13,8 +13,8 @@ mixin navmenu(menu_items)
                             =item.title
 
 +navmenu([
-    { 'title': 'Chasis y Tablas',  'link': './index.html'},
-    { 'title': 'Piezas de Repuesto',  'link': './posts.html'},
-    { 'title': 'Ropa',  'link': './posts.html'},
-    { 'title': 'Material Mushing',  'link': './posts.html'}
+    { 'title': 'Chasis y Tablas',  'link': './chasis-tablas.html'},
+    { 'title': 'Piezas de Repuesto',  'link': './piezas-repuesto.html'},
+    { 'title': 'Ropa',  'link': './ropa.html'},
+    { 'title': 'Material Mushing',  'link': './material-mushing.html'}
 ])
