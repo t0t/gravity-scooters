@@ -1,32 +1,28 @@
-footer.siteFooter
-    block footer
-        //- aside.Marcas
-        //-     h3.Marcas__title #{PageTitle}
-        //-     li.MarcasItem
-        //-         a(href="#" class="")
-        //-             svg(class="icon  iconArkit")
-        //-                 use(xlink:href="assets/icons.svg#icon-cor")
-        //-     li.MarcasItem
-        //-         a(href="#" class="")
-        //-             svg(class="icon  iconHabit")
-        //-                 use(xlink:href="assets/icons.svg#icon-cor")
-        //-     li.MarcasItem
-        //-         a(href="#" class="")
-        //-             svg(class="icon  iconBrico")
-        //-                 use(xlink:href="assets/icons.svg#icon-cor")
+footer
+	block footer
+		//- aside.Marcas
+		//-     h3.Marcas__title #{PageTitle}
+		//-     li.MarcasItem
+		//-         a(href="#" class="")
+		//-             svg(class="icon  iconArkit")
+		//-                 use(xlink:href="assets/icons.svg#icon-cor")
+		//-     li.MarcasItem
+		//-         a(href="#" class="")
+		//-             svg(class="icon  iconHabit")
+		//-                 use(xlink:href="assets/icons.svg#icon-cor")
+		//-     li.MarcasItem
+		//-         a(href="#" class="")
+		//-             svg(class="icon  iconBrico")
+		//-                 use(xlink:href="assets/icons.svg#icon-cor")
 
+		main.siteFooter
+			include _nav-gravity
+			include _nav-scooters
+			include _nav-cultura
+			include _nav-accesorios
 
-        main.siteFooter
-            include _nav-gravity
-            include _nav-scooters
-            include _nav-cultura
-            include _nav-accesorios
-            
-            section.siteFooter--credits
-                p &copy; #{new Date().getFullYear()}
-                small #{PageTitle}
-                p #{AuthorBrief}
+			section.siteFooter--credits
+				p &copy; #{new Date().getFullYear()} #{Address}
+				include ../components/_newsletter
 
-                include ../components/_contact
-
-        div(class="scrollToTop" onclick="scrolltop();")
+		div(class="scrollToTop" onclick="scrolltop();")
