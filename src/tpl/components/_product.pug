@@ -1,3 +1,4 @@
+include ../../_db/_scooters.pug
 include ../../_db/_products.pug
 include ../../_db/_downhill.pug
 include ../../_db/_mushing.pug
@@ -9,11 +10,16 @@ include ../../_db/_escooters.pug
 include ../lib/mixins/_coverintro
 include ../lib/mixins/_product-card
 
-+coverintro(
-	"af awef wef revwervrwe vwr vr vewr ver vre ve v rever verfberfbrer be wrbefbrthbsrdfhrethjkw ilfjksdn gilsgjsgisdbgio",
-	"j huegf uoerhg uoehrg uoergeoruhg",
-	"erf werge rge"
-	)
+if current == "Downhill"
+	+coverintro(
+		"af awef wef revwervrwe vwr vr vewr ver vre ve v rever verfberfbrer be wrbefbrthbsrdfhrethjkw ilfjksdn gilsgjsgisdbgio",
+		"j huegf uoerhg uoehrg uoergeoruhg", 
+		"assets/images/downhill.jpg" )
+if current == "Mushing"
+	+coverintro(
+		"Una gran superficie despejada para poner los pies, junto con la posición relativa del manillar y la inclinación del tren delantero, es lo que crea la inconfundible sensación de conducir un Gravity. No sólo es una sensación, la seguridad, facilidad de conducción y comodidad que ofrecen son reales. Estas geometrías hacen que ninguna máquina de dos ruedas sea más estable que un Gravity.",
+		"j huegf uoerhg uoehrg uoergeoruhg", 
+		"assets/images/mushing.jpg" )
 
 section.ProductList
 	if current == "Downhill"

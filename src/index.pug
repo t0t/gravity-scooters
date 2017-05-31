@@ -8,15 +8,15 @@ block main
 	include ./_db/_cover
 	include ./tpl/lib/mixins/_coverintro
 
-	section.Cover(style="background-image: url(" + cover.image_url + ")")
-		+coverintro(
-			cover.description,
-			cover.cta_text
-			)
-		each cat in scooters
-			a.CoverItem(href=cat.link_url style="background-image: url(" + cat.image_url + ")")
-				h1= cat.name
-				h3= cat.description
+	+coverintro(
+		cover.description,
+		cover.cta_text
+		)
+		
+	each cat in scooters
+		a.CoverItem(href=cat.link_url style="background-image: url(" + cat.image_url + ")")
+			h1= cat.name
+			h3= cat.description
 
 	aside.AboutUs
 		include tpl/components/_aboutus
