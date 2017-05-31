@@ -1,4 +1,10 @@
 include ../../_db/_products.pug
+include ../../_db/_downhill.pug
+include ../../_db/_mushing.pug
+include ../../_db/_snow.pug
+include ../../_db/_pixies.pug
+include ../../_db/_trail.pug
+include ../../_db/_escooters.pug
 
 mixin product-card(product)
 	h2.productTitle= product.title
@@ -7,6 +13,26 @@ mixin product-card(product)
 		figcaption
 			div.detail
 				p= product.description
+				p= product.price
+				p= product.price_tax
 
-for product in products
-	+product-card(product)
+if current == "Downhill"
+	for product in downhill
+		+product-card(product)
+else if current == "Mushing"
+	for product in mushing
+		+product-card(product)
+else if current == "Snow"
+	for product in snow
+		+product-card(product)
+else if current == "Pixies"
+	for product in pixies
+		+product-card(product)
+else if current == "Trail"
+	for product in trail
+		+product-card(product)
+else if current == "EScooters"
+	for product in escooters
+		+product-card(product)
+else
+	h1 product not loading well
