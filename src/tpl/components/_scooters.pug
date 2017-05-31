@@ -1,16 +1,15 @@
 include ../../_db/_scooters
 
-
 section.Posts(data-aos="fade-in", data-aos-offset="100")
-    h2.Posts__title Scooters
-    mixin show(scooter)
-        article.Posts__item(itemtype="http://schema.org/CreativeWork")
-            figure
-                img.post(src=scooter.image_url)
-                figcaption
-                    a(href=scooter.link_url alt="Image Title")
-                        h3= scooter.name
-                        p= scooter.description
+	h2.Posts__title Scooters
+	mixin show(scooter)
+		article.Posts__item(itemtype="http://schema.org/CreativeWork")
+			figure
+				img.post(src=scooter.image_url)
+				figcaption
+					a(href=scooter.link_url alt="Image Title")
+						h3= scooter.name
+						p= scooter.description
 
-    for scooter in scooters
-        +show(scooter)
+	for scooter in scooters
+		+show(scooter)

@@ -1,0 +1,11 @@
+include ../../../_db/_distribuidores
+mixin distrib-card()
+	for d in distribuidores
+		article
+			p
+				strong=d.country
+			p=d.name
+			p=d.url
+			p=d.address
+			p=d.phone
+			p=d.email

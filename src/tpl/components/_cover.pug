@@ -1,12 +1,24 @@
-include ../../_db/_features.pug
 include ../lib/mixins/_svg-icon.pug
+include ./_db/_scooters
+include ./_db/_cover
+include ./tpl/lib/mixins/_coverintro
 
 mixin cover-feature(feature)
-    .CoverFeatures--item
-        h3=feature.title
-            +svg-icon(feature.icon)
+	.CoverFeatures--item
+		h3=feature.title
+			+svg-icon(feature.icon)
 
 section.Cover
-    aside.CoverFeatures
-        for feature in features
-            +cover-feature(feature)
+	aside.CoverFeatures
+		for feature in features
+			+cover-feature(feature)
+
+			section.Cover(style="background-image: url(" + cover.image_url + ")")
+				+coverintro(
+					cover.description,
+					cover.cta_text
+					)
+				each cat in scooters
+					a.CoverItem(href=cat.link_url style="background-image: url(" + cat.image_url + ")")
+						h1= cat.name
+						h3= cat.description

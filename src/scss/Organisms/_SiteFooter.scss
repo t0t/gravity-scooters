@@ -2,6 +2,13 @@
  * Site Footer
  */
 .siteFooter {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	justify-content: space-around;
+	nav {
+
+	}
 	&--credits {
 		display: flex;
 		flex-wrap: wrap;
@@ -10,7 +17,7 @@
 		height: $spacing_base * 2;
 		color: $white;
 		background-color: $gray_light;
-		height: 100vh;
+		height: 100%;
 		@include max-screen($small) {
 			font-size: 0.8em;
 		}

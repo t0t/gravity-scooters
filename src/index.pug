@@ -4,25 +4,19 @@ prepend header
 	- current = "Home"
 
 block main
-	include ./_db/_scooters
-	include ./_db/_cover
+	include ./tpl/lib/mixins/_coverintro
+	include ./tpl/lib/mixins/_listscooters
 
-	section.Cover(style="background-image: url(" + cover.image_url + ")")
-		.CoverIntro
-			h4= cover.description
-			button= cover.cta_text
-		each cat in scooters
-			div.CoverItem(style="background-image: url(" + cat.image_url + ")")
-				h1= cat.name
-				h3= cat.description
+	+coverintro(
+		cover.name,
+		cover.description,
+		cover.cta_text
+	)
 
-	aside
-		h2 Nosotros
-		h2 Dónde provar
-		h2 Nuestra Gente
+	+listscooters()
+
+	aside.AboutUs
+		include tpl/components/_aboutus
 
 	footer
-		h2 Accesorios
-		p E-points
-
-	//- include ./tpl/components/_product
+		button E-points

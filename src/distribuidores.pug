@@ -1,0 +1,7 @@
+extends ./tpl/_layout
+prepend header
+	- current = "Distribuidores"
+
+block main
+	include ./tpl/lib/mixins/_distrib-card
+	+distrib-card(distribuidores)

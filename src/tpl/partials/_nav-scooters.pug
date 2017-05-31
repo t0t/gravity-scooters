@@ -1,6 +1,6 @@
 mixin navmenu(menu_items)
-    h4 Scooters
     nav(role="navigation")
+        h4 Scooters
         ul
             each item in menu_items
                 if item.title == current
@@ -13,10 +13,10 @@ mixin navmenu(menu_items)
                             =item.title
 
 +navmenu([
-    { 'title': 'Downhill',  'link': './index.html'},
-    { 'title': 'Mushing',  'link': './posts.html'},
-    { 'title': 'Pixies',  'link': './posts.html'},
-    { 'title': 'Snow',  'link': './posts.html'},
-    { 'title': 'Trail',  'link': './products.html'},
-    { 'title': 'E-Scooters',  'link': './products.html'}
+    { 'title': 'Downhill',  'link': './downhill.html'},
+    { 'title': 'Mushing',  'link': './mushing.html'},
+    { 'title': 'Pixies',  'link': './pixies.html'},
+    { 'title': 'Snow',  'link': './snowing.html'},
+    { 'title': 'Trail',  'link': './trail.html'},
+    { 'title': 'E-Scooters',  'link': './escooters.html'}
 ])

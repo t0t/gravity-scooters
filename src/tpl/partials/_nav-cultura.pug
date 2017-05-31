@@ -1,6 +1,6 @@
 mixin navmenu(menu_items)
-    h4 Cultura
     nav(role="navigation")
+        h4 Cultura
         ul
             each item in menu_items
                 if item.title == current
@@ -13,8 +13,8 @@ mixin navmenu(menu_items)
                             =item.title
 
 +navmenu([
-    { 'title': 'Sobre Nosotros',  'link': './index.html'},
-    { 'title': 'Nuestros Patinetes',  'link': './posts.html'},
-    { 'title': 'Nuestra Gente',  'link': './posts.html'},
-    { 'title': 'Donde Probar',  'link': './posts.html'}
+    { 'title': 'Sobre Nosotros',  'link': './about.html'},
+    { 'title': 'Nuestros Patinetes',  'link': './scooters.html'},
+    { 'title': 'Nuestra Gente',  'link': './nuestra-gente.html'},
+    { 'title': 'Donde Probar',  'link': './donde-probar.html'}
 ])
