@@ -5,34 +5,34 @@ include ../../_db/_snow.pug
 include ../../_db/_pixies.pug
 include ../../_db/_trail.pug
 include ../../_db/_escooters.pug
+//- include ../tpl/lib/mixins/_coverintro
+include ../lib/mixins/_coverintro
+include ../lib/mixins/_product-card
 
-mixin product-card(product)
-	h2.productTitle= product.title
-	figure.ProductSection
-		img( src=product.image_url )
-		figcaption
-			div.detail
-				p= product.description
-				p= product.price
-				p= product.price_tax
++coverintro(
+	"af awef wef revwervrwe vwr vr vewr ver vre ve v rever verfberfbrer be wrbefbrthbsrdfhrethjkw ilfjksdn gilsgjsgisdbgio",
+	"j huegf uoerhg uoehrg uoergeoruhg",
+	"erf werge rge"
+	)
 
-if current == "Downhill"
-	for product in downhill
-		+product-card(product)
-else if current == "Mushing"
-	for product in mushing
-		+product-card(product)
-else if current == "Snow"
-	for product in snow
-		+product-card(product)
-else if current == "Pixies"
-	for product in pixies
-		+product-card(product)
-else if current == "Trail"
-	for product in trail
-		+product-card(product)
-else if current == "EScooters"
-	for product in escooters
-		+product-card(product)
-else
-	h1 product not loading well
+section.ProductList
+	if current == "Downhill"
+		for product in downhill
+			+product-card(product)
+	else if current == "Mushing"
+		for product in mushing
+			+product-card(product)
+	else if current == "Snow"
+		for product in snow
+			+product-card(product)
+	else if current == "Pixies"
+		for product in pixies
+			+product-card(product)
+	else if current == "Trail"
+		for product in trail
+			+product-card(product)
+	else if current == "EScooters"
+		for product in escooters
+			+product-card(product)
+	else
+		h1 product not loading well
