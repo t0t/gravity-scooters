@@ -1,6 +1,8 @@
+include ../../../_db/_cover
+
 mixin coverintro(title,p,btn,image)
 	section.Cover(style="background-image: url(" + cover.image_url + ")")
 		.CoverIntro
 			h1.title=title
 			p=p
-			button.btn=btn
+			a.btn(href="scooters.html")=btn
