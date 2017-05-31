@@ -17,9 +17,10 @@
     }
 	&Section {
 		// background-color: $brand_color3;
-		padding: $spacing_base;
+		// padding: $spacing_base;
 		color: $black;
-        img {
+        &Detail {
+            display: flex;
         }
 	}
 

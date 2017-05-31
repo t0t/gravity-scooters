@@ -1,6 +1,5 @@
-mixin coverintro(title,btn,image)
+mixin coverintro(title,p,image)
 	section.Cover(style="background-image: url(" + image + ")")
 		.CoverIntro
-			//- img(src="assets/images/"+image)
-			h3.title=title
-			button.btn=btn
+			h1.title=title
+			p=p

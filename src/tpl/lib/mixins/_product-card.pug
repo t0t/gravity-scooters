@@ -1,10 +1,10 @@
 mixin product-card(product)
 	article.ProductItem
-		h2.productTitle= product.title
+		h3.productTitle= product.title
 		figure.ProductSection
 			img( src=product.image_url )
 			figcaption
-				div.detail
-					p= product.description
-					p= product.price
-					p= product.price_tax
+				p= product.description
+				div.Detail
+					h2= product.price
+					p (#{product.price_tax} IVA incluido)
