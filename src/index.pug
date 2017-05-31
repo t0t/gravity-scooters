@@ -6,11 +6,13 @@ prepend header
 block main
 	include ./_db/_scooters
 	include ./_db/_cover
+	include ./tpl/lib/mixins/_coverintro
 
 	section.Cover(style="background-image: url(" + cover.image_url + ")")
-		.CoverIntro
-			h4= cover.description
-			button= cover.cta_text
+		+coverintro(
+			cover.description,
+			cover.cta_text
+			)
 		each cat in scooters
 			a.CoverItem(href=cat.link_url style="background-image: url(" + cat.image_url + ")")
 				h1= cat.name
