@@ -1,8 +1,7 @@
 extends ./tpl/_layout
-
 prepend header
-    - current = "About"
+	- current = "Distribuidores"
 
 block main
-    //- include ./tpl/components/_cover
-    //- include ./tpl/components/_posts
+	include ./tpl/lib/mixins/_distrib-card
+	+distrib-card(distribuidores)

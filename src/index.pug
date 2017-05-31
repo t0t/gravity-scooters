@@ -9,12 +9,13 @@ block main
 	include ./tpl/lib/mixins/_coverintro
 
 	+coverintro(
+		cover.name,
 		cover.description,
 		cover.cta_text
 		)
-		
+
 	each cat in scooters
-		a.CoverItem(href=cat.link_url style="background-image: url(" + cat.image_url + ")")
+		a.CoverItem( href=cat.link_url style="background-image: url(" + cat.image_url + ")" )
 			h1= cat.name
 			h3= cat.description
 
